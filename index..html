@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcards</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Flashcards for Learning</h1>
+
+    <!-- Flashcard Display -->
+    <div id="flashcard" class="flashcard">
+      <p id="question">Question will appear here</p>
+      <button id="flip-btn" class="flip-btn">Flip</button>
+      <p id="answer" class="answer hidden">Answer will appear here</p>
+      <button id="delete-btn" class="delete-btn hidden">Delete</button>
+    </div>
+
+    <!-- Add New Flashcard Form -->
+    <div id="add-card-form" class="add-card-form">
+      <h2>Add a New Flashcard</h2>
+      <input type="text" id="new-question" placeholder="Enter question" />
+      <input type="text" id="new-answer" placeholder="Enter answer" />
+      <button id="add-card-btn" class="add-btn">Add Card</button>
+    </div>
+
+    <!-- Flashcards List -->
+    <div id="card-list" class="card-list">
+      <h2>All Flashcards</h2>
+      <ul id="card-list-items"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

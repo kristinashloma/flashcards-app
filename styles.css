@@ -1,0 +1,193 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(45deg, #6a11cb, #2575fc); /* Gradient background for body */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  animation: fadeIn 1s ease-out;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  background: -webkit-linear-gradient(#6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Flashcard */
+.flashcard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+  padding: 25px;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.flashcard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+}
+
+.flip-btn, .add-btn, .delete-btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  outline: none;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.flip-btn {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: white;
+}
+
+.flip-btn:hover {
+  background: linear-gradient(45deg, #2575fc, #6a11cb);
+}
+
+.add-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.add-btn:hover {
+  background-color: #45a049;
+}
+
+.delete-btn {
+  background-color: #F44336;
+  color: white;
+  display: none;
+}
+
+.delete-btn:hover {
+  background-color: #D32F2F;
+}
+
+/* Answer */
+.answer {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #555;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.answer.hidden {
+  opacity: 0;
+}
+
+.answer.visible {
+  opacity: 1;
+}
+
+/* Add Card Form */
+.add-card-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px;
+  width: 100%;
+}
+
+.add-card-form input {
+  padding: 12px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.add-card-form input:focus {
+  border-color: #2575fc;
+}
+
+.add-card-form button {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-card-form button:hover {
+  background: linear-gradient(45deg, #2575fc, #6a11cb);
+}
+
+/* Flashcard List */
+.card-list {
+  width: 100%;
+}
+
+.card-list ul {
+  display: grid;
+  gap: 15px;
+  padding: 0;
+  list-style: none;
+}
+
+.card-list li {
+  padding: 15px;
+  background-color: #f3f3f3;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card-list li:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-5px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
